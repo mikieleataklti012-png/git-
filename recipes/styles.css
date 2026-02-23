@@ -1,0 +1,65 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font: bold;
+}
+.block {
+    display: block;
+    box-sizing: content-box;
+    background-color: blue;
+}
+ul {
+    display: inline-flex;  
+}
+li {
+    box-sizing: border-box;
+    border: 2em;
+    margin: 1em;
+    padding: 1em;
+}
+.try {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: 900;
+    background-color: aqua;
+}
+.marginP {
+    display: inline-block;
+    background-color: brown;
+}
+p {
+    font-style: italic;
+    font-size: large;
+}
+.container {
+    padding: 4px;
+    margin: 0%;
+    display:flex;
+    border: 2px solid black;
+    width: 50%;   
+}
+.container div{
+    border: 2px solid rgb(225, 149, 7);
+    padding: 10px;
+    flex: 1;
+}
+.twos{
+    display: flex;
+    flex: 2;
+}
+.container .twos{
+    flex: 2 1 0%;
+}
+.container1 {
+    padding: 4px;
+    margin: 0%;
+    display:flex;
+    border: 2px solid black;
+    justify-content: space-between;
+    width: 50%;
+}
+.container1 div{
+    border:2px solid rgb(205, 160, 13);
+    padding:3px;
+    flex: 1;
+}
+
