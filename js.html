@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // checking gender of the user
+      function check(gen){
+        if(gen=="m"){
+            return "male";
+        }
+        else if (gen=="f"){
+            return 'female';
+        }
+        else{
+            let x=confirm('Are u sure');
+            if(x){
+                return 'not registered';
+            }
+            else{
+                return "please try again";
+            }
+        }
+      }  
+      let gender= prompt("what is your gender--'m' or 'f'");
+      gender=check(gender);
+      alert(gender);
+
+    //   practicing arrow functions
+      let say=(a,b)=>a+b;
+      alert(say(2,4));
+      let double=n=>n*2;
+      alert(double(4));
+      let sayhi=()=>alert("hello");
+      sayhi();
+
+    //   fuzzbuzz game
+      let num=prompt("enter a number");
+      for(let i=1;i<=num;i++){
+        if(i%3==0){
+            alert("fuzz");
+        }
+        else if(i%5==0){
+            alert("buzz");
+        }
+        else {
+            alert(i);}
+      }  
+
+    //   practicing arrays
+    let arr=['apple','black','click'];
+    alert(arr);
+    alert(arr.length);
+    arr.push(9,3,4);
+    alert(arr);
+    alert(arr.at(-2)); //starts to count from the last place
+    alert(arr.shift());
+    alert(arr);
+    alert(arr.unshift('apple','pinnats'));
+    alert(arr);
+    for(let ar of arr){    
+        alert(ar);
+    }
+    alert(arr.toString());
+    arr.splice(2,1,'pickle','coton'); //2 is index, 1 is the number of items to remove, the ohters are to be added
+    alert(arr);
+    //arr.slice(1,5) copies elements from index upto excluding 5 and makes a new array
+    ary=arr.concat('coca',3); //concat copies the array and adds elements to it
+    alert(ary);
+    arr.forEach(alert); 
+    /* arr.indexOf(item, from) – looks for item starting from index from, and returns the index where it was found, 
+    otherwise -1.*/
+    // arr.includes(item, from) – looks for item starting from index from, returns true if found.
+    // let result = arr.find(function(item, index, array) used to find objects
+    arr.sort(); // sort compares the elemnts as strings eg.[1,2,15]=>[1,15,2]
+    arr.sort(function(a,b){return a-b});
+    arr. reverse();
+    alert(arr);
+    let str=arr.join(';');// joins all the elements in to a string with ';'
+    alert(str);
+    //let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(item => item.length);
+    //alert(lengths);  the output is =>5,7,6
+    function oddNums(num){
+        return num%2!==0;// this returns true if the number is odd
+    }
+    let numbers=[1,2,3,4,5,6];
+    let odd=numbers.filter(oddNums);
+    alert(odd);// filter creats a new array
+    alert(numbers);
+    let product=numbers.reduce((total,current)=>total*current);
+    </script>
+</body>
+</html>

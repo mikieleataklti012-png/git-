@@ -1,0 +1,26 @@
+const container = document.createElement("div");
+container.classList.add("container");
+const paragraph=document.createElement("p");
+paragraph.textContent = "This is a simple paragraph and this is blue";
+paragraph.style.color = "blue";
+const head= document.createElement("h3");
+head.textContent = "this is red and heading 3";
+head.style.color = "red";
+container.appendChild(paragraph);
+container.appendChild(head);
+document.body.appendChild(container);
+const cont= document.createElement("div");
+const h1 = document.createElement("h1");
+h1.textContent = "I am in div";
+cont.appendChild(h1);
+const p = document.createElement("p");
+p.textContent = "I am in div too";
+cont.appendChild(p);
+document.body.appendChild(cont);
+const btn = document.getElementById("btn");
+btn.onclick=()=>alert("hello");
+const bt =document.getElementById("bt");
+bt.addEventListener("click",()=>{alert("hello there")});
+bt.addEventListener("click", function (event) {
+  console.log(event.target);
+});
